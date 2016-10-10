@@ -57,11 +57,11 @@ $(() => {
   const signUp = (credentials) => signUpOrIn(credentials, '/sign-up');
 
   const submitHandler = function (event) {
-    event.preventDefault;
+    event.preventDefault();
 
     let data = getFormFields(event.target);
 
-    signUp(formData)
+    signUp(data)
     .then(onSignUp)
     .then(() => signIn(data)) // LOOK here - the `() =>` makes it a function
                               // definition instead of an invocation
